@@ -57,40 +57,7 @@ public class Adfinder {
     }
 
     public boolean checkForCaps(Check check) {
-        boolean caps = false;
-        String[] words = check.getMessage().split("\\s+");
-        for (int i = 0; i < words.length; i++) {
-            String word = words[i];
-            if (word.length() >= 4 && word.equals(word.toUpperCase()) && !isNumbers(word) &&  core.getConfig().getProcentCapital() != 0) {
-                core.debug("else if 1");
-                word = word.toLowerCase();
-                words[i] = word;
-                caps = true;
-                break;
-                //if the words is longer than or 4 long
-            } else if (word.length() >= 4 && core.getConfig().getProcentCapital()!= 0) {
-
-                int upper = 0;
-                char[] charArray = word.toCharArray();
-                for (char aCharArray : charArray) {
-                    String letter = aCharArray + "";
-                    if (letter.equals(letter.toUpperCase()) && !isNumbers(letter)) {
-                        upper++;
-                    }
-
-                }
-
-                if (upper * 100 / charArray.length * 100 >=  core.getConfig().getProcentCapital() * 100) {
-                    core.debug("else if 2");
-                    word = word.toLowerCase();
-                    words[i] = word;
-                    caps = true;
-                    break;
-                }
-            }
-        }
-        check.setMessage(StringUtils.join(words, " "));
-        return caps;
+        return false;
     }
 
     /**

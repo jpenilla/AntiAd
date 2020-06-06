@@ -28,9 +28,6 @@ public class AntiAd extends JavaPlugin {
         core = new Core(this);
         createConfigAndAttact();
 
-
-
-
         adfinder = new Adfinder(core);
         //Setting op the plugin listener to listen on this :)
         getServer().getPluginManager().registerEvents(new ADListener(core), this);
@@ -69,7 +66,6 @@ public class AntiAd extends JavaPlugin {
 
         getLogger().info(getFromLanguage("enable").replaceAll("%PLUGIN%", getDescription().getName()).replaceAll("%VERSION%", getDescription().getVersion()));
 
-        new Update(core, 52014);
         new Metrics(core);
 
     }
