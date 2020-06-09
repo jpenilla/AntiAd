@@ -14,7 +14,7 @@ public class Core {
     private AntiAd plugin;
     private Logger logger;
     private Properties language;
-    private boolean DEBUG = true;
+    private boolean DEBUG = false;
 
 
     public Core(AntiAd plugin){
